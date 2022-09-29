@@ -1,0 +1,20 @@
+<div class="container">
+<h1>All Notifications</h1>
+</div>
+<%- include('../partials/search') %>
+
+<ul>
+    <% problems.forEach(problem => { %>
+    <div class="container mt-5">
+        <h2><%= problem.type %> </h2>
+        <h3><%= problem.city%> </h3>
+        <h3><%= problem.adres %> </h3>
+        <p><%= problem.problem %> </p>
+        <div class="col-3">
+        <img src="/uploads/<%= problem.image %>" class="img-fluid"> 
+        </div>
+    </div>
+    <hr>
+
+        <% }); %>
+</ul>
